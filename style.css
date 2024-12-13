@@ -1,0 +1,446 @@
+/* Resetting margin, padding, and box-sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensuring the body and html take full height */
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+/* Smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Background gradient for the body */
+body {
+    background: linear-gradient(135deg, #f0f4f8, #d8e2e7);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2c3e50; /* Dark Blue */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 60px;
+    padding: 10px 20px; /* Reduced padding for more compact navbar */
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for a more modern feel */
+}
+nav > h5 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ecf0f1; /* Light Gray */
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+nav > h5:hover {
+    color: #f39c12; /* Hover effect color */
+}
+nav > ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-right: 20px;
+}
+
+nav > ul > a {
+    color: #ecf0f1; /* Light Gray */
+    text-decoration: none;
+    font-size: 16px; /* Reduced font size for cleaner look */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav > ul > a:hover {
+    color: #f39c12; /* Hover effect color */
+}
+
+/* Fixing the body layout to account for fixed navbar */
+body {
+    padding-top: 60px; /* Prevents content from being hidden under the navbar */
+}
+/* Hover effect on links */
+nav > ul > a:hover {
+    background-color: #f39c12; /* Orange background on hover */
+    color: #2c3e50; /* Dark Blue text color on hover */
+}
+
+/* Responsive navbar with hamburger menu */
+@media (max-width: 768px) {
+    nav > ul {
+        display: none; /* Hide links on smaller screens */
+    }
+
+    nav > .hamburger {
+        display: block; /* Show hamburger icon */
+        cursor: pointer;
+        font-size: 30px;
+        color: #ecf0f1;
+    }
+    
+    nav.active > ul {
+        display: block; /* Show links when navbar is active */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #2c3e50;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    nav.active > ul > a {
+        padding: 15px;
+        display: block; /* Stack links vertically */
+    }
+}
+
+/* Hamburger menu style */
+.hamburger {
+    display: none; /* Hidden by default, shown on mobile */
+}
+/* Cursor style for custom cursor */
+.cursor {
+    width: 20px;
+    height: 20px;
+    background-color: #00d1b2; /* Neon Green */
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    position: absolute;
+    transition: all linear 0.2s;
+    z-index: 999;
+}
+
+/* Home section styles */
+section {
+    background-color: #f5f5f5; /* Light Gray */
+}
+
+#Home {
+    display: flex;
+    justify-content: space-around;
+    height: calc(100vh - 60px); /* Full viewport height minus navbar */
+}
+
+#Home > #image {
+    width: 50%;
+}
+
+#Home > #image > img {
+    width: 100%;
+}
+
+#Home > #content {
+    width: 50%;
+}
+
+#image {
+    position: relative;
+    margin: 20px auto;
+    width: 50%;
+}
+
+#image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#image img:hover {
+    transform: scale(1.05);
+    filter: brightness(80%);
+}
+
+/* Content heading style */
+#content h1 {
+    font-size: 60px;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #2c3e50; /* Dark Blue */
+}
+
+/* Box styles */
+#box {
+    background-color: #f3a72c; /* Soft Coral */
+    border: 2px solid #2c3e50; /* Dark Border */
+    position: absolute;
+    top: 20rem;
+    left: 5rem;
+    height: 15rem;
+    width: 30rem;
+    border-radius: 50px;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+#box p {
+    font-size: 20px;
+    color: #34495e;
+}
+
+#box button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #28a745; /* Bright Green */
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#box button:hover {
+    background-color: #218838; /* Darker Green */
+}
+
+
+.small-div {
+    font-size: 20px;
+    margin-bottom: 10px;
+    border: 2px solid white;
+    padding: 20px;
+    width: 23%; /* Adjust width for responsive layout */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border-radius: 8px;
+    background-color: #333; /* Background color for each box */
+    cursor: pointer; /* Shows pointer cursor for interactivity */
+}
+
+.small-div:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+    background-color: #444; /* Darker background on hover */
+}
+
+.small-div img {
+    width: 60px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Smooth transition for image */
+}
+
+.small-div:hover img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.small-div > h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.small-div:hover > h1 {
+    color: #f39c12; /* Change color of the heading on hover */
+}
+
+.small-div > p {
+    font-size: 14px;
+    color: #bbb; /* Slightly lighter text color */
+    transition: color 0.3s ease;
+}
+
+.small-div:hover > p {
+    color: #fff; /* Change text color to white on hover */
+}
+#image {
+    position: relative;
+    width: 100%; /* Adjust width as needed */
+    max-width: 600px; /* Max width to avoid overly large images */
+    margin: 40px auto; /* Margin at the top and bottom to create space */
+    text-align: center; /* Center the image */
+}
+
+#image img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Hover effects */
+}
+
+#image img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    filter: brightness(80%); /* Darken the image slightly */
+}
+
+/* Ensure the project div is not too close to the image */
+#project {
+    padding-top: 20px; /* Add padding on top */
+    margin-top: 40px; /* Add margin on top to avoid overlap with image */
+    width: inherit;
+    height: auto;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 40px 100px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+
+/* About Section with Image Background */
+#About {
+    margin-top: 100px;
+    text-align: center;
+    color: white; /* Text color */
+    padding: 60px 20px;
+    background-image: url('https://coding.ph/cdn/shop/files/WhatsApp_Image_2019-04-16_at_9.34.54_PM_5.jpg?v=1672743043&width=1500');
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the background image */
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+    border-radius: 10px; /* Optional rounded corners */
+    position: relative; /* Positioning for the overlay */
+}
+
+/* Adding a dark overlay behind the text for better visibility */
+#About::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
+    border-radius: 10px; /* Optional to match rounded corners */
+    z-index: 1; /* Ensures the overlay is behind the text */
+}
+
+/* Title and Paragraph Text Styling */
+#About h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    z-index: 2; /* Ensures the text is above the overlay */
+    position: relative; /* Positioning for the text */
+}
+
+#About p {
+    font-size: 20px;
+    font-weight: lighter;
+    max-width: 800px;
+    margin: 0 auto; /* Centers the paragraph */
+    line-height: 1.5;
+    padding: 10px 20px;
+    z-index: 2; /* Ensures the text is above the overlay */
+    position: relative; /* Positioning for the text */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    #About h1 {
+        font-size: 36px;
+    }
+
+    #About p {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+}
+/* Contact Section */
+#contact {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    margin-top: 100px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#contact h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+.form-group label {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact {
+        padding: 30px 10px;
+    }
+
+    #contact h1 {
+        font-size: 30px;
+    }
+
+    #contact p {
+        font-size: 16px;
+    }
+
+    .form-group label {
+        font-size: 16px;
+    }
+
+    .form-group input, .form-group textarea {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 12px 24px;
+    }
+}

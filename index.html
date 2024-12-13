@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="cursor"></div>
+        <nav>
+            <h5>Coder Acadmey</h5>
+            <ul>
+                <a href="#Home">Home</a>
+                <a href="#project">Project</a>
+                <a href="#About">About</a>
+                <a href="#contact">contact</a>
+            </ul>
+        </nav>
+        <section>
+            <div id="Home">
+                <div id="content">
+                    <div>
+                        <h1>Learn from the Coolest <br> Coding Platform of <br> india.</h1>
+                        <div id="box">
+                            <p>Countless subjects to explore. Enduring abilities to gain.
+                                Explore our course offerings that would ignite your child's love for learning!</p>
+
+                            <button>Start Learning</button>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div id="image">
+                    <img src="./code.jpg" alt="">
+                </div>
+
+            </div>
+            <div id="project">
+                <div class="small-div">
+                    <img src="https://coding.ph/cdn/shop/files/certificate.png?v=1680003000&width=120" alt="">
+                    <h1>Certificate of Completion</h1>
+                    <p>Students receive feedback and recommendations after finishing a course</p>
+
+                </div>
+                <div class="small-div">
+                    <img src="https://coding.ph/cdn/shop/files/online-class.png?v=1680003004&width=120" alt="">
+                    <h1>Online Class Setup</h1>
+                    <p>Live classes are held online via Zoom with a dedicated coach </p>
+
+
+
+                </div>
+                <div class="small-div">
+                    <img src="https://coding.ph/cdn/shop/files/modular-learning.png?v=1680003002&width=120" alt="">
+                    <h1>Digital Learning</h1>
+                    <p>Courses are designed to maintain a steady pace in learning topic.
+                    </p>
+                </div>
+                <div class="small-div">
+                    <img src="https://coding.ph/cdn/shop/files/peer-learning.png?v=1680003001&width=120" alt="">
+                    <h1>Peer Learning</h1>
+                    <p>
+                        Students are encouraged to share their ideas and work collaboratively </p>
+
+                </div>
+            </div>
+            <div id="About">
+                <h1>The Coding School</h1>
+                <p>is the leading Coding and Design After-School and Summer Camp provider</p>
+            </div>
+            <div id="contact">
+                <h1>Contact Us</h1>
+                <p>Feel free to reach out to us for any inquiries or feedback. We're here to help!</p>
+                <form action="submit_form.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            
+
+        </section>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
